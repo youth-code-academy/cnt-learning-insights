@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <!-- Required elements-->
-        <id>cnt-learning-insights</id>
+        <id>YouthCodeAcademy.CntLearningInsights</id>
         <version>1.0.0</version>
         <description>
             A package collecting LaTeX learning point insights to be used in publications.
@@ -11,10 +11,12 @@
 
         <!-- Optional elements -->
         <license type="file">LICENSE</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
     </metadata>
 
     <!-- Optional 'files' node -->
     <files>
-        <file src="src/*.tex" target="." />
+        <file src=".\src\*.tex" target="" />
+        <file src=".\LICENS*" target="" />
     </files>
 </package>
