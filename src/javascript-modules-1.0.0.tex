@@ -8,8 +8,12 @@
 % =======================================================================
 %
 
+% Macro holding the actual heading text plus label %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\CntLIHeadingText}{\section{Modules in Javascript}\label{sec:javascript-modules-1.0.0}}
 
+% Rendering the header %
+%%%%%%%%%%%%%%%%%%%%%%%%
 \ifdefined\CntLIHeading
     \CntLIHeadingText
 \else
@@ -17,5 +21,9 @@
         \CntLIHeadingText
     \fi
 \fi
+%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Snippet body %
+%%%%%%%%%%%%%%%%
 Something
+%%%%%%%%%%%%%%%%
