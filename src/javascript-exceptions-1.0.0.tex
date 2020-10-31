@@ -1,0 +1,47 @@
+%
+% Andrea Tino
+% 2020
+%
+% =======================================================================
+% Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+% Public License
+% =======================================================================
+%
+
+% Same for every snippet file %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined\CntLIHeadingHeadingType
+\else
+    \newcommand{\CntLIHeadingHeadingType}[1]{
+        \ifdefined\CntLIHeadingSection
+            \section{#1}
+        \else
+            \ifdefined\CntLIHeadingSubSection
+                \subsection{#1}
+            \else
+                % Default
+                \section{#1}
+            \fi
+        \fi
+    }
+\fi
+
+% Macro holding the actual heading text plus label %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CntLIHeadingJavascriptExceptionsText}{\CntLIHeadingHeadingType{Exceptions in Javascript}\label{sec:javascript-exceptions-1.0.0}}
+
+% Rendering the header %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined\CntLIHeading
+    \CntLIHeadingJavascriptExceptionsText
+\else
+    \ifdefined\CntLIHeadingJavascriptExceptionsVIvOvO
+        \CntLIHeadingJavascriptExceptionsText
+    \fi
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Snippet body %
+%%%%%%%%%%%%%%%%
+The body for Javascript exceptions.
+%%%%%%%%%%%%%%%%
