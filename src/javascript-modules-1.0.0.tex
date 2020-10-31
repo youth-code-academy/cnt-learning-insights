@@ -8,17 +8,35 @@
 % =======================================================================
 %
 
+% Same for every snippet file %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined\CntLIHeadingHeadingType
+\else
+    \newcommand{\CntLIHeadingHeadingType}[1]{
+        \ifdefined\CntLIHeadingSection
+            \section{#1}
+        \else
+            \ifdefined\CntLIHeadingSubSection
+                \subsection{#1}
+            \else
+                % Default
+                \section{#1}
+            \fi
+        \fi
+    }
+\fi
+
 % Macro holding the actual heading text plus label %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\CntLIHeadingText}{\section{Modules in Javascript}\label{sec:javascript-modules-1.0.0}}
+\newcommand{\CntLIHeadingJavascriptModulesText}{\CntLIHeadingHeadingType{Modules in Javascript}\label{sec:javascript-modules-1.0.0}}
 
 % Rendering the header %
 %%%%%%%%%%%%%%%%%%%%%%%%
 \ifdefined\CntLIHeading
-    \CntLIHeadingText
+    \CntLIHeadingJavascriptModulesText
 \else
     \ifdefined\CntLIHeadingJavascriptModulesVIvOvO
-        \CntLIHeadingText
+        \CntLIHeadingJavascriptModulesText
     \fi
 \fi
 %%%%%%%%%%%%%%%%%%%%%%%%
